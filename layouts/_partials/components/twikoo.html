@@ -9,7 +9,8 @@
     if (!el) return;
 
     var s = document.createElement('script');
-    s.src = '{{ .envId }}/twikoo.js';
+    s.src = 'https://cdn.jsdelivr.net/npm/twikoo@{{ .version | default `1` }}/dist/twikoo.all.min.js';
+    s.crossOrigin = 'anonymous';
     s.onload = function () {
       if (typeof twikoo === 'undefined') return;
       twikoo.init({
@@ -23,7 +24,7 @@
       });
     };
     s.onerror = function () {
-      console.warn('Failed to load twikoo.js from {{ .envId }}');
+      el.innerHTML = '<p style="color: #999; padding: 1rem;">评论加载失败，请刷新重试</p>';
     };
     document.body.appendChild(s);
   })();
