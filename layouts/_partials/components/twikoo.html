@@ -1,39 +1,32 @@
 {{- $lang := site.Language.Lang | default `zh-CN` -}}
 
 {{- with site.Params.comments.twikoo -}}
-<script>
-  function getTwikooTheme() {
-    const twikooTheme = '{{ .theme }}';
-    if (twikooTheme) return twikooTheme;
-
-    const hugoTheme = localStorage.getItem("color-theme");
-    if (hugoTheme === 'dark') return 'dark';
-    if (hugoTheme === 'light') return 'light';
-
-    if (hugoTheme === 'system') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-</script>
-
 <div id="twikoo-hextra-container"></div>
 
-<script src="{{ .envId }}/twikoo.js" defer></script>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    twikoo.init({
-      envId: '{{ .envId }}',
-      el: '#twikoo-hextra-container',
-      lang: '{{ .lang | default $lang }}',
-      path: window.location.pathname,
-      {{- with .region }}
-      region: '{{ . }}',
-      {{- end }}
-    });
-  });
+  (function () {
+    var el = document.getElementById('twikoo-hextra-container');
+    if (!el) return;
+
+    var s = document.createElement('script');
+    s.src = '{{ .envId }}/twikoo.js';
+    s.onload = function () {
+      if (typeof twikoo === 'undefined') return;
+      twikoo.init({
+        envId: '{{ .envId }}',
+        el: '#twikoo-hextra-container',
+        lang: '{{ .lang | default $lang }}',
+        path: window.location.pathname,
+        {{- with .region }}
+        region: '{{ . }}',
+        {{- end }}
+      });
+    };
+    s.onerror = function () {
+      console.warn('Failed to load twikoo.js from {{ .envId }}');
+    };
+    document.body.appendChild(s);
+  })();
 </script>
 {{- else -}}
   {{ warnf "twikoo is not configured" }}
