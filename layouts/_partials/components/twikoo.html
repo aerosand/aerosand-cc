@@ -1,0 +1,40 @@
+{{- $lang := site.Language.Lang | default `zh-CN` -}}
+
+{{- with site.Params.comments.twikoo -}}
+<script>
+  function getTwikooTheme() {
+    const twikooTheme = '{{ .theme }}';
+    if (twikooTheme) return twikooTheme;
+
+    const hugoTheme = localStorage.getItem("color-theme");
+    if (hugoTheme === 'dark') return 'dark';
+    if (hugoTheme === 'light') return 'light';
+
+    if (hugoTheme === 'system') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+</script>
+
+<div id="twikoo-hextra-container"></div>
+
+<script src="{{ .envId }}/twikoo.js" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    twikoo.init({
+      envId: '{{ .envId }}',
+      el: '#twikoo-hextra-container',
+      lang: '{{ .lang | default $lang }}',
+      path: window.location.pathname,
+      {{- with .region }}
+      region: '{{ . }}',
+      {{- end }}
+    });
+  });
+</script>
+{{- else -}}
+  {{ warnf "twikoo is not configured" }}
+{{- end -}}

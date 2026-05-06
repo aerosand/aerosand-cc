@@ -237,23 +237,12 @@ params:
     #   sync: true
 
   comments:
-    enable: false
-    type: giscus
+    enable: true
+    type: twikoo
 
-    # https://giscus.app/
-    giscus:
-      repo: aerosand/aerosand.github.io
-      repoId: R_kgDOPjTFCw
-      category: General
-      categoryId: DIC_kwDOPjTFC84CuiTG
-      mapping: title
-      strict: 0
-      reactionsEnabled: 1
-      emitMetadata: 1
-      inputPosition: top
-      lang: en
-      loading: lazy
-      theme: noborder_dark
+    twikoo:
+      envId: https://twikoo.aerosand.cc
+      lang: zh-CN
   
   analytics:
     umami:

@@ -57,7 +57,7 @@ jobs:
         run: |
           hugo \
             --gc --minify \
-            --baseURL "https://aerosand/cc/"
+            --baseURL "https://aerosand.github.io/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
