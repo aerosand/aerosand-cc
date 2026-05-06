@@ -1,0 +1,21 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.name != "_index"
+        - file.name != "about"
+        - '!file.name.contains("zh-CN")'
+        - file.folder == "content/docs/ofs/ofsp"
+    order:
+      - file.name
+      - file.tags
+      - file.mtime
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 212
+      file.tags: 265

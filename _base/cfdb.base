@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "content/docs/cfd/cfdb"
+        - '!file.name.contains("png")'
+    order:
+      - file.name
+      - file.tags
+      - file.mtime

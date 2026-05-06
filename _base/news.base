@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("content/news")
+        - '!file.name.contains("zh-CN")'
+    order:
+      - file.name
+      - file.tags
+      - file.ctime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.tags: 188

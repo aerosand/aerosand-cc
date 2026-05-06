@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("content/ofs")
+        - file.name.contains("index")
+    order:
+      - file.name
+      - file.folder
+      - file.mtime
