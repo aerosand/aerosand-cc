@@ -6,7 +6,7 @@ next: /docs/guide/shortcodes/callout
 sidebar:
   open: false
 date: 2025-07-22
-update: 2026-03-27
+update: 2026-05-20 11:05:57
 ---
 
 > [!important]
@@ -70,7 +70,7 @@ Let's start the discussion of this series.
 {{< cards >}}
   {{< card link="./20_simple" title="20_simple" tag="start here" tagColor="green" >}}
   {{< card link="./21_simplesol" title="21_simpleSol" >}}
-  {{< card link="./22_piso" title="22_pisoSol" >}}
+  {{< card link="./22_piso" title="22_piso" >}}
   {{< card link="./23_pisosol" title="23_pisoSol" >}}
   {{< card link="./24_pimple" title="24_pimple" >}}
   {{< card link="./25_pimplesol" title="21_pimpleSol" >}}
