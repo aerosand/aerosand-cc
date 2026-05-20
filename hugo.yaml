@@ -147,7 +147,7 @@ menu:
       weight: 2
     - identifier: discussions
       name: "Github Discussions ↗"
-      url: "https://github.com/Aerosand/aerosand.github.io/discussions"
+      url: "https://github.com/aerosand/aerosand-cn/discussions"
       weight: 3
 
 params:
