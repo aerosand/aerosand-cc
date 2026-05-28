@@ -242,7 +242,6 @@ params:
 
     twikoo:
       envId: https://twikoo.aerosand.cc
-      lang: zh-CN
   
   analytics:
     umami:
