@@ -412,7 +412,7 @@ This section has completed the following discussions:
 >The information and message provided during donation will be displayed as an acknowledgment of your support.
 
 {{< cards >}}
-  {{< card link="/" title="Support" image="https://www.notion.so/image/attachment%3A3be6af9a-4829-4dfd-997e-641dfd055ba9%3Aalipay.jpg?table=block&id=22cd34b0-7c4c-8086-bdda-d558df1d9a11&t=22cd34b0-7c4c-8086-bdda-d558df1d9a11" subtitle="AliPay" >}}
+  {{< card link="/" title="Support" image="https://picgocloud.com/m/5b6ca32b-d4f4-4c92-9ea9-9fad71080835.jpg" subtitle="AliPay" >}}
 {{< /cards >}}
 
 

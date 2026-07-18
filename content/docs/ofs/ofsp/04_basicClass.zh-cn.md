@@ -337,7 +337,7 @@ API 页面 https://api.openfoam.com/2506/IOobject_8H.html
 
 
 {{< cards >}}
-  {{< card link="/" title="支持" image="https://www.notion.so/image/attachment%3A3be6af9a-4829-4dfd-997e-641dfd055ba9%3Aalipay.jpg?table=block&id=22cd34b0-7c4c-8086-bdda-d558df1d9a11&t=22cd34b0-7c4c-8086-bdda-d558df1d9a11" subtitle="支付宝" >}}
+  {{< card link="/" title="支持" image="https://picgocloud.com/m/5b6ca32b-d4f4-4c92-9ea9-9fad71080835.jpg" subtitle="支付宝" >}}
 {{< /cards >}}
 
 
