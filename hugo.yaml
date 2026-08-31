@@ -29,8 +29,6 @@ languages:
     weight: 2
 
 
-
-
 module:
 #  hugoVersion:
 #    extended: true
