@@ -24,7 +24,7 @@ languages:
   en:
     label: English
     weight: 1
-  zh-CN:
+  zh-cmn:
     label: 简体中文
     weight: 2
 
