@@ -225,12 +225,23 @@ params:
     # tabs:
     #   sync: true
 
+  # comments:
+  #   enable: true
+  #   type: twikoo
+
+  #   twikoo:
+  #     envId: https://twikoo.aerosand.cc
   comments:
     enable: true
-    type: twikoo
+    type: giscus
 
-    twikoo:
-      envId: https://twikoo.aerosand.cc
+    giscus:
+      repo: aerosand/aerosand-cc
+      repoId: R_kgDOSVhHTg
+      category: Announcements
+      categoryId: DIC_kwDOSVhHTs4DIknP
+      inputPosition: top
+      theme: noborder_light
   
   analytics:
     umami:
