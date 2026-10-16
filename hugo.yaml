@@ -83,6 +83,7 @@ menu:
       weight: 98
       params:
         type: search
+        icon: search
     - name: GitHub
       weight: 99
       url: "https://github.com/aerosand"
